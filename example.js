@@ -9,13 +9,13 @@ const { exec, execSync } = require('child_process');
 const { WebSocket, createWebSocketStream } = require('ws');
 
 // Fill in parameters
-const UUID = process.env.UUID || 'define-your-uuid-here'; // When running Nezha v1, UUID must be changed on different platforms, otherwise it will be overwritten
+const UUID = process.env.UUID || 'define-your-uuid-here';             // When running Nezha v1, UUID must be changed on different platforms, otherwise it will be overwritten
 const DOMAIN = process.env.DOMAIN || 'your-project-domain.com';       // Enter the project domain, without the "https://" prefix
-const AUTO_ACCESS = process.env.AUTO_ACCESS || false;      // Whether to enable auto-access keep-alive; false = disabled, true = enabled; DOMAIN variable must also be set
-const WSPATH = process.env.WSPATH || UUID.slice(0, 8);     // Node path, defaults to the first 8 characters of the UUID
-const SUB_PATH = process.env.SUB_PATH || 'sub';            // Subscription path for retrieving nodes
-const NAME = process.env.NAME || '';                       // Node name
-const PORT = process.env.PORT || 3000;                     // HTTP and WebSocket server port
+const AUTO_ACCESS = process.env.AUTO_ACCESS || false;                 // Whether to enable auto-access keep-alive; false = disabled, true = enabled; DOMAIN variable must also be set
+const WSPATH = process.env.WSPATH || UUID.slice(0, 8);                // Node path, defaults to the first 8 characters of the UUID
+const SUB_PATH = process.env.SUB_PATH || 'sub';                       // Subscription path for retrieving nodes
+const NAME = process.env.NAME || '';                                  // Node name
+const PORT = process.env.PORT || 3000;                                // HTTP and WebSocket server port
 
 // Nezha fields can be left empty
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';       // Nezha v1 format: nz.abc.com:8008   Nezha v0 format: nz.abc.com
