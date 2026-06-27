@@ -14,7 +14,7 @@ Telegram：http://notparham.t.me
 
 </div>
 
-## [Web-hosting Deployment Guide](https://github.com/eooce/node-ws/blob/main/web-hosting.md) (Applicable to all DirectAdmin panels with nodejs App function)
+## [Web-Hosting Deployment Guide](https://github.com/ParhamzXc/Node-WebSocket/blob/main/web-hosting.md) (Applicable to all DirectAdmin panels with nodejs App function)
 
 * Tools for node environment, based on node three-party ws library, Vless+Trojan dual protocol, integrated Nezha probe service (v0 or v1), you can add environment variables by YOURSELF.
 
