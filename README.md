@@ -1,6 +1,6 @@
 <div align="center">
 
-# Node-ws
+# Node-WebSocket
 Dual-Protocol Proxy implemented based on serverless, no kernel & lightweight.
 
 1. Fork this repository
