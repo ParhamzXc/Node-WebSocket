@@ -5,8 +5,8 @@ Dual-Protocol Proxy implemented based on serverless, no kernel & lightweight.
 
 1. Fork this repository
 2. Allow GitHub Actions `I understand my workflows, go ahead and enable them` button
-## 3. Refer to the example.js clear text code and fill in the required variables, then obfuscate, save and replace it in the index.js file. The js obfuscation address: https://obfuscator.io
-## 4. Modify the image name in .github/workflows/build-image.yml - line 44
+3. Refer to the example.js clear text code and fill in the required variables, then obfuscate, save and replace it in the index.js file. The js obfuscation address: https://obfuscator.io
+4. Modify the image name in .github/workflows/build-image.yml - line 44
 
 ---
 
