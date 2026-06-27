@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmic Frontiers - 探索未知</title>
+    <title>Cosmic Frontiers - Explore the Unknown</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         :root {
+            /* Space Theme Colors */
             --primary: #0b3d91;   /* NASA Blue */
             --secondary: #1e1e2f; /* Deep Space */
             --accent: #00d4ff;    /* Neon Cyan */
@@ -36,7 +37,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 15px rgba(0, 212, 255, 0.2); /* 蓝色光晕 */
+            box-shadow: 0 2px 15px rgba(0, 212, 255, 0.2); /* Blue Glow */
             backdrop-filter: blur(10px);
         }
 
@@ -107,11 +108,11 @@
         }
 
         .hero {
-            /* 替换为星空背景 */
+            /* Starfield background */
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* 视差滚动效果 */
+            background-attachment: fixed; /* Parallax scrolling effect */
             height: 85vh;
             display: flex;
             align-items: center;
@@ -350,7 +351,7 @@
             padding: 6rem 0;
         }
         
-        /* 添加一些背景装饰 */
+        /* Add some background decoration */
         .cta::before {
             content: '';
             position: absolute;
@@ -556,11 +557,11 @@
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home">主页</a></li>
-                    <li><a href="#about">任务简报</a></li>
-                    <li><a href="#initiatives">科研项目</a></li>
-                    <li><a href="#technology">技术中心</a></li>
-                    <li><a href="#contact">联系指挥部</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Mission Briefing</a></li>
+                    <li><a href="#initiatives">Research Projects</a></li>
+                    <li><a href="#technology">Technology Hub</a></li>
+                    <li><a href="#contact">Contact HQ</a></li>
                 </ul>
             </nav>
         </div>
@@ -568,50 +569,50 @@
 
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>穿越星际，探索无限</h1>
-            <p>人类的未来不只属于地球。加入Cosmic Frontiers，共同揭开宇宙深处的奥秘，为人类文明寻找新的疆域。</p>
-            <a href="#initiatives" class="btn">开启探索之旅</a>
+            <h1>Traverse the Stars, Explore the Infinite</h1>
+            <p>Humanity's future extends beyond Earth. Join Cosmic Frontiers to uncover the mysteries of the deep universe and find new frontiers for human civilization.</p>
+            <a href="#initiatives" class="btn">Begin Your Exploration</a>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>关于我们</h2>
-                <p>致力于深空探测、外星生命搜寻以及下一代宇航推进技术的非营利性科研组织。</p>
+                <h2>About Us</h2>
+                <p>A non-profit research organization dedicated to deep-space exploration, the search for extraterrestrial life, and next-generation aerospace propulsion technology.</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
                     <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" alt="Space Station View">
                 </div>
                 <div class="about-text">
-                    <h3>我们的使命</h3>
-                    <p>Cosmic Frontiers 成立于2030年，汇集了全球顶尖的天体物理学家、工程师和梦想家。</p>
-                    <p>我们相信，通过跨国界的合作与技术共享，人类能够在半个世纪内实现星际移民。</p>
-                    <p>我们的工作涵盖了从近地轨道清理到深空射电望远镜阵列建设的广泛领域，每一小步都是通向群星的一大步。</p>
-                    <a href="#" class="btn">阅读任务报告</a>
+                    <h3>Our Mission</h3>
+                    <p>Cosmic Frontiers was founded in 2030, bringing together the world's leading astrophysicists, engineers, and visionaries.</p>
+                    <p>We believe that through cross-border collaboration and technology sharing, humanity can achieve interstellar migration within half a century.</p>
+                    <p>Our work spans a wide range of fields — from clearing low-Earth orbit debris to constructing deep-space radio telescope arrays. Every small step is a giant leap toward the stars.</p>
+                    <a href="#" class="btn">Read Mission Report</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
                     <i class="fas fa-satellite"></i>
                     <h3 class="counter" data-target="58">0</h3>
-                    <p>在轨卫星</p>
+                    <p>Satellites in Orbit</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-user-astronaut"></i>
                     <h3 class="counter" data-target="120">0</h3>
-                    <p>训练宇航员</p>
+                    <p>Trained Astronauts</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-database"></i>
                     <h3 class="counter" data-target="8500">0</h3>
-                    <p>TB 数据采集</p>
+                    <p>TB Data Collected</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-globe"></i>
                     <h3 class="counter" data-target="32">0</h3>
-                    <p>合作国家</p>
+                    <p>Partner Nations</p>
                 </div>
             </div>
         </div>
@@ -620,8 +621,8 @@
     <section class="initiatives" id="initiatives">
         <div class="container">
             <div class="section-title">
-                <h2>核心科研项目</h2>
-                <p>了解我们正在进行的突破性项目，这些项目正在重新定义人类对宇宙的认知。</p>
+                <h2>Core Research Projects</h2>
+                <p>Discover our ongoing breakthrough projects that are redefining humanity's understanding of the cosmos.</p>
             </div>
             <div class="initiatives-grid">
                 <div class="initiative-card">
@@ -629,9 +630,9 @@
                         <img src="https://images.unsplash.com/photo-1614728853913-1e32005e3099?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="Mars Surface">
                     </div>
                     <div class="initiative-content">
-                        <h3>火星前哨站 Alpha</h3>
-                        <p>建立首个永久性火星科研基地，研究当地地质结构并进行封闭生态系统生存实验。</p>
-                        <a href="#" class="btn" style="font-size: 0.8rem; padding: 0.5rem 1.5rem;">查看详情</a>
+                        <h3>Mars Outpost Alpha</h3>
+                        <p>Establishing the first permanent Mars research base to study local geological structures and conduct closed-ecosystem survival experiments.</p>
+                        <a href="#" class="btn" style="font-size: 0.8rem; padding: 0.5rem 1.5rem;">View Details</a>
                     </div>
                 </div>
                 <div class="initiative-card">
@@ -639,9 +640,9 @@
                         <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&auto=format&fit=crop&w=2022&q=80" alt="Nebula">
                     </div>
                     <div class="initiative-content">
-                        <h3>深空之眼计划</h3>
-                        <p>部署下一代韦伯级空间望远镜阵列，旨在捕捉宇宙大爆炸后最初一亿年的光辉。</p>
-                        <a href="#" class="btn" style="font-size: 0.8rem; padding: 0.5rem 1.5rem;">查看详情</a>
+                        <h3>Deep Space Eye Initiative</h3>
+                        <p>Deploying a next-generation Webb-class space telescope array aimed at capturing light from the first 100 million years after the Big Bang.</p>
+                        <a href="#" class="btn" style="font-size: 0.8rem; padding: 0.5rem 1.5rem;">View Details</a>
                     </div>
                 </div>
                 <div class="initiative-card">
@@ -649,9 +650,9 @@
                         <img src="https://images.unsplash.com/photo-1518364538800-6bae3c2ea0f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" alt="Asteroid">
                     </div>
                     <div class="initiative-content">
-                        <h3>小行星防御网</h3>
-                        <p>构建全球联动的近地天体监测与防御系统，通过动能撞击技术保护地球免受威胁。</p>
-                        <a href="#" class="btn" style="font-size: 0.8rem; padding: 0.5rem 1.5rem;">查看详情</a>
+                        <h3>Asteroid Defense Network</h3>
+                        <p>Building a globally coordinated near-Earth object monitoring and defense system to protect Earth from threats using kinetic impact technology.</p>
+                        <a href="#" class="btn" style="font-size: 0.8rem; padding: 0.5rem 1.5rem;">View Details</a>
                     </div>
                 </div>
             </div>
@@ -660,9 +661,9 @@
 
     <section class="cta" id="join">
         <div class="container">
-            <h2>成为星际公民</h2>
-            <p>无论您是科学家、工程师还是天文爱好者，这里都有属于您的位置。加入我们的社区，第一时间获取最新探索资讯。</p>
-            <a href="#" class="btn">注册会员</a>
+            <h2>Become an Interstellar Citizen</h2>
+            <p>Whether you are a scientist, engineer, or astronomy enthusiast, there is a place for you here. Join our community and be the first to receive the latest exploration news.</p>
+            <a href="#" class="btn">Register as a Member</a>
         </div>
     </section>
 
@@ -671,7 +672,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Cosmic Frontiers</h3>
-                    <p>探索未知，连接未来。我们致力于推进人类航天事业的发展，并将科学的火种传递给下一代。</p>
+                    <p>Explore the unknown, connect to the future. We are dedicated to advancing humanity's space endeavors and passing the torch of science to the next generation.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-discord"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -680,34 +681,34 @@
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>快速导航</h3>
+                    <h3>Quick Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">主页</a></li>
-                        <li><a href="#about">关于我们</a></li>
-                        <li><a href="#initiatives">科研项目</a></li>
-                        <li><a href="#news">新闻动态</a></li>
-                        <li><a href="#contact">加入我们</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#initiatives">Research Projects</a></li>
+                        <li><a href="#news">News &amp; Updates</a></li>
+                        <li><a href="#contact">Join Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>研究领域</h3>
+                    <h3>Research Areas</h3>
                     <ul class="footer-links">
-                        <li><a href="#">外星生物学</a></li>
-                        <li><a href="#">量子推进引擎</a></li>
-                        <li><a href="#">空间站架构</a></li>
-                        <li><a href="#">暗物质探测</a></li>
-                        <li><a href="#">火星农业</a></li>
+                        <li><a href="#">Astrobiology</a></li>
+                        <li><a href="#">Quantum Propulsion Engine</a></li>
+                        <li><a href="#">Space Station Architecture</a></li>
+                        <li><a href="#">Dark Matter Detection</a></li>
+                        <li><a href="#">Martian Agriculture</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>联络中心</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 肯尼迪航天中心, FL 32899</p>
+                    <h3>Contact Center</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Kennedy Space Center, FL 32899</p>
                     <p><i class="fas fa-phone"></i> +1 (321) 555-0100</p>
                     <p><i class="fas fa-envelope"></i> mission@cosmicfrontiers.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Cosmic Frontiers. 此页面仅为演示目的。</p>
+                <p>&copy; 2025 Cosmic Frontiers. This page is for demonstration purposes only.</p>
             </div>
         </div>
     </footer>
@@ -730,7 +731,7 @@
                 
                 if(count < target) {
                     counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 10); // 稍微调慢了一点速度以适应动画
+                    setTimeout(animateCounters, 10); // Slightly slowed down to match animation
                 } else {
                     counter.innerText = target;
                 }
