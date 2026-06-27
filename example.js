@@ -9,8 +9,8 @@ const { exec, execSync } = require('child_process');
 const { WebSocket, createWebSocketStream } = require('ws');
 
 // Fill in parameters
-const UUID = process.env.UUID || 'define-your-uuid-here';             // When running Nezha v1, UUID must be changed on different platforms, otherwise it will be overwritten
-const DOMAIN = process.env.DOMAIN || 'your-project-domain.com';       // Enter the project domain, without the "https://" prefix
+const UUID = process.env.UUID || 'eae62f0c-7156-475d-8ed0-6d966de68727';             // When running Nezha v1, UUID must be changed on different platforms, otherwise it will be overwritten
+const DOMAIN = process.env.DOMAIN || 'chrono.6ixxi9.workers.dev';     // Enter the project domain, without the "https://" prefix
 const AUTO_ACCESS = process.env.AUTO_ACCESS || false;                 // Whether to enable auto-access keep-alive; false = disabled, true = enabled; DOMAIN variable must also be set
 const WSPATH = process.env.WSPATH || UUID.slice(0, 8);                // Node path, defaults to the first 8 characters of the UUID
 const SUB_PATH = process.env.SUB_PATH || 'sub';                       // Subscription path for retrieving nodes
@@ -50,11 +50,11 @@ const httpServer = http.createServer((req, res) => {
   } else if (req.url === `/${SUB_PATH}`) {
     const namePart = NAME ? `${NAME}-${ISP}` : ISP;
     
-    // **Modify VLESS subscription link to meet requirements**
+    // **Modify subscription link to meet requirements**
     // Using preferred CDN domain (cdns.doon.eu.org), fingerprint (fp)=chrome, ALPN=http/1.1
-    const vlessURL = `vless://${UUID}@cdns.doon.eu.org:443?encryption=none&security=tls&sni=${DOMAIN}&fp=chrome&alpn=http%2F1.1&type=ws&host=${DOMAIN}&path=%2F${WSPATH}#${namePart}`;
+    const zexURL = `vless://${UUID}@cdns.doon.eu.org:443?encryption=none&security=tls&sni=${DOMAIN}&fp=chrome&alpn=http%2F1.1&type=ws&host=${DOMAIN}&path=%2F${WSPATH}#${namePart}`;
     
-    const subscription = vlessURL; // Keep only VLESS
+    const subscription = zexURL; // Keep only VLESS
     const base64Content = Buffer.from(subscription).toString('base64');
     
     res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -112,7 +112,7 @@ function resolveHost(host) {
 }
 
 // VLESS handling
-function handleVlessConnection(ws, msg) {
+function handleZeXConnection(ws, msg) {
   const [VERSION] = msg;
   const id = msg.slice(1, 17);
   if (!id.every((v, i) => v == parseInt(uuid.substr(i * 2, 2), 16))) return false;
@@ -155,9 +155,9 @@ wss.on('connection', (ws, req) => {
     // VLESS protocol check
     if (msg.length > 17 && msg[0] === 0) {
       const id = msg.slice(1, 17);
-      const isVless = id.every((v, i) => v == parseInt(uuid.substr(i * 2, 2), 16));
-      if (isVless) {
-        if (!handleVlessConnection(ws, msg)) {
+      const isZeX = id.every((v, i) => v == parseInt(uuid.substr(i * 2, 2), 16));
+      if (isZeX) {
+        if (!handleZeXConnection(ws, msg)) {
           ws.close();
         }
         return;
